@@ -23,6 +23,7 @@ __exportStar(require("./models/account"), exports);
 __exportStar(require("./models/error"), exports);
 __exportStar(require("./models/i18n"), exports);
 __exportStar(require("./models/interaction"), exports);
+__exportStar(require("./models/index"), exports);
 __exportStar(require("./models/key"), exports);
 __exportStar(require("./models/provider"), exports);
 __exportStar(require("./models/requests"), exports);
