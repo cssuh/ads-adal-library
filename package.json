@@ -2,6 +2,7 @@
   "name": "adal-aad-node",
   "version": "1.0.0",
   "description": "ADAL NodeJS authentication library",
+  "main": "dist/index.js",
   "scripts": {
     "build": "yarn run build-ts && yarn run lint",
     "build-ts": "tsc",
