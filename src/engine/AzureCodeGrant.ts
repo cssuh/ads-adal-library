@@ -40,8 +40,8 @@ export class AzureCodeGrant extends AzureAuth {
         };
 
         const signInUrl = `${this.loginEndpointUrl}${tenant}/oauth2/authorize?${qs.stringify(loginQuery)}`;
-        await this.userInteraction.openUrl(signInUrl);
-        const authCode = await this.authRequest.getAuthorizationCode(state);
+        await this.userInteraction.openLocalUrl();
+        const authCode = await this.authRequest.getAuthorizationCode(signInUrl, state);
 
 
         const response = await this.getTokenWithAuthorizationCode(tenant, resource, {

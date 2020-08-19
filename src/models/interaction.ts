@@ -7,9 +7,8 @@ export interface UserInteraction {
 
     /**
      * Opens a browser page on the caller.
-     * @param url
      */
-    openUrl(url: string): Promise<void>;
+    openLocalUrl(): Promise<void>;
 }
 
 export interface AuthRequest {
@@ -20,9 +19,10 @@ export interface AuthRequest {
 
     /**
      * After the auth mechanism opens the URL, it will request an auth token to be returned to the caller to finish the authentication process.
+     * @param signInUrl
      * @param state
      */
-    getAuthorizationCode(state: string): Promise<string>;
+    getAuthorizationCode(signInUrl: string, state: string): Promise<string>;
 
     /**
      * Display the device code screen to the user.
