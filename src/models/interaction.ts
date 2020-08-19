@@ -22,7 +22,7 @@ export interface AuthRequest {
      * @param signInUrl
      * @param state
      */
-    getAuthorizationCode(signInUrl: string, state: string): Promise<string>;
+    getAuthorizationCode(signInUrl: string, authCompletePromise: Promise<void>): Promise<string>;
 
     /**
      * Display the device code screen to the user.
