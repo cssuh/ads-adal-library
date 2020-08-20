@@ -26,7 +26,7 @@ export class AzureCodeGrant extends AzureAuth {
 
         const { codeVerifier, codeChallenge } = this.createCryptoValues();
         const state = await this.authRequest.getState();
-
+        console.log(state);
         const loginQuery = {
             response_type: 'code',
             response_mode: 'query',
