@@ -7,8 +7,9 @@ export interface UserInteraction {
 
     /**
      * Opens a browser page on the caller.
+     * @param url
      */
-    openLocalUrl(): Promise<void>;
+    openUrl(url: string): Promise<void>;
 }
 
 export interface AuthRequest {
