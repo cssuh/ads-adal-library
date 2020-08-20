@@ -33,7 +33,7 @@ export abstract class AzureAuth {
 	protected abstract async login(tenant: Tenant, resource: AADResource): Promise<LoginResponse>;
 
 	public async startLogin(): Promise<AzureAccount | undefined> {
-		console.log(`start login`);
+		this.logger.log(`start login`);
 		let loginComplete: Deferred<void> | undefined;
 		try {
 			const result = await this.login(this.commonTenant, this.providerSettings.resources.windowsManagementResource);
