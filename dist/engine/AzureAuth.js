@@ -48,6 +48,7 @@ class AzureAuth {
         this.loginEndpointUrl = providerSettings.loginEndpoint;
     }
     async startLogin() {
+        this.logger.log(`start login`);
         let loginComplete;
         try {
             const result = await this.login(this.commonTenant, this.providerSettings.resources.windowsManagementResource);

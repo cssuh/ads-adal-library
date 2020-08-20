@@ -44,6 +44,7 @@ class AzureCodeGrant extends azureAuth_1.AzureAuth {
         let authCompletePromise = new Promise((resolve, reject) => authCompleteDeferred = { resolve, reject });
         const { codeVerifier, codeChallenge } = this.createCryptoValues();
         const state = await this.authRequest.getState();
+        this.logger.log(`library state: ${state}`);
         const loginQuery = {
             response_type: 'code',
             response_mode: 'query',
@@ -55,9 +56,9 @@ class AzureCodeGrant extends azureAuth_1.AzureAuth {
             code_challenge: codeChallenge,
             resource: resource.id
         };
-        const signInUrl = `${this.loginEndpointUrl}${tenant}/oauth2/authorize?${qs.stringify(loginQuery)}`;
+        const signInUrl = `${this.loginEndpointUrl}${tenant.id}/oauth2/authorize?${qs.stringify(loginQuery)}`;
         await this.userInteraction.openUrl(signInUrl);
-        const authCode = await this.authRequest.getAuthorizationCode(state);
+        const authCode = await this.authRequest.getAuthorizationCode(signInUrl, authCompletePromise);
         const response = await this.getTokenWithAuthorizationCode(tenant, resource, {
             authCode,
             redirectUri: this.providerSettings.redirectUri,
