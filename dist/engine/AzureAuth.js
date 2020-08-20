@@ -44,7 +44,7 @@ class AzureAuth {
             id: 'common',
             displayName: 'common'
         };
-        this.clientId = providerSettings.id;
+        this.clientId = providerSettings.clientId;
         this.loginEndpointUrl = providerSettings.loginEndpoint;
     }
     async startLogin() {
