@@ -1,6 +1,7 @@
 export interface ProviderSettings {
     displayName: string;
     id: string;
+    clientId: string;
     loginEndpoint: string;
     portalEndpoint: string;
     redirectUri: string;

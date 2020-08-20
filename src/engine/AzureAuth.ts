@@ -26,7 +26,7 @@ export abstract class AzureAuth {
 		protected readonly stringLookup: StringLookup,
 		protected readonly azureAuthType: AzureAuthType
 	) {
-		this.clientId = providerSettings.id;
+		this.clientId = providerSettings.clientId;
 		this.loginEndpointUrl = providerSettings.loginEndpoint;
 	}
 
