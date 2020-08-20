@@ -44,7 +44,6 @@ class AzureCodeGrant extends azureAuth_1.AzureAuth {
         let authCompletePromise = new Promise((resolve, reject) => authCompleteDeferred = { resolve, reject });
         const { codeVerifier, codeChallenge } = this.createCryptoValues();
         const state = await this.authRequest.getState();
-        this.logger.log(`library state: ${state}`);
         const loginQuery = {
             response_type: 'code',
             response_mode: 'query',
