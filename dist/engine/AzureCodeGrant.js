@@ -53,7 +53,7 @@ class AzureCodeGrant extends azureAuth_1.AzureAuth {
             prompt: 'select_account',
             code_challenge_method: 'S256',
             code_challenge: codeChallenge,
-            resource: resource.id
+            resource: resource.endpoint
         };
         const signInUrl = `${this.loginEndpointUrl}${tenant.id}/oauth2/authorize?${qs.stringify(loginQuery)}`;
         await this.userInteraction.openUrl(signInUrl);
