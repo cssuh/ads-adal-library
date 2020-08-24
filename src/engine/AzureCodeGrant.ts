@@ -76,7 +76,7 @@ export class AzureCodeGrant extends AzureAuth {
             client_id: this.clientId,
             code_verifier: codeVerifier,
             redirect_uri: redirectUri,
-            resource: resource.resource
+            resource: resource.endpoint
         };
 
         return this.getToken(tenant, resource, postData);
