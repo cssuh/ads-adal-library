@@ -25,7 +25,7 @@ export class AzureDeviceCode extends AzureAuth {
 
         const postData: DeviceCodeStartPostData = {
             client_id: this.clientId,
-            resource: resource.resource
+            resource: resource.endpoint
         };
 
         const postResult = await this.makePostRequest(uri, postData);

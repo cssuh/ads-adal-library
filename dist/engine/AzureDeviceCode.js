@@ -24,7 +24,7 @@ class AzureDeviceCode extends azureAuth_1.AzureAuth {
         const uri = `${this.loginEndpointUrl}/${this.commonTenant.id}/oauth2/devicecode`;
         const postData = {
             client_id: this.clientId,
-            resource: resource.resource
+            resource: resource.endpoint
         };
         const postResult = await this.makePostRequest(uri, postData);
         const initialDeviceLogin = postResult.data;
