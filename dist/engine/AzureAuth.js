@@ -233,7 +233,7 @@ class AzureAuth {
     }
     //#region tenant calls
     async getTenants(token) {
-        const tenantUri = url.resolve(this.providerSettings.resources.azureManagementResource.resource, 'tenants?api-version=2019-11-01');
+        const tenantUri = url.resolve(this.providerSettings.resources.azureManagementResource.endpoint, 'tenants?api-version=2019-11-01');
         try {
             const tenantResponse = await this.makeGetRequest(tenantUri, token.token);
             this.logger.pii('getTenants', tenantResponse.data);
