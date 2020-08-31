@@ -170,7 +170,7 @@ export abstract class AzureAuth {
 				client_id: this.clientId,
 				refresh_token: refreshToken.token,
 				tenant: tenant.id,
-				resource: resource.resource
+				resource: resource.endpoint
 			};
 
 			return this.getToken(tenant, resource, postData);
