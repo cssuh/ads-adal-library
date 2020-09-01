@@ -1,8 +1,9 @@
 {
-  "name": "adal-aad-node",
+  "name": "@Microsoft/ads-adal-library",
   "version": "1.0.0",
   "description": "ADAL NodeJS authentication library",
   "main": "dist/index.js",
+  "repository": "git://github.com/cssuh/ads-adal-library.git",
   "scripts": {
     "build": "yarn run build-ts && yarn run lint",
     "build-ts": "tsc",
