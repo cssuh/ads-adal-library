@@ -1,5 +1,5 @@
 {
-  "name": "@Microsoft/ads-adal-library",
+  "name": "@cssuh/ads-adal-library",
   "version": "1.0.0",
   "description": "ADAL NodeJS authentication library",
   "main": "dist/index.js",
@@ -24,5 +24,8 @@
   "dependencies": {
     "axios": "^0.19.2",
     "qs": "^6.9.4"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
