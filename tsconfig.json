@@ -8,7 +8,8 @@
 	  "allowSyntheticDefaultImports": true,
 	  "noImplicitAny": true,
 	  "moduleResolution": "node",
-	  "strict": true
+	  "strict": true,
+	  "declaration": true
 	},
 	"include": [
 	  "src/**/*.ts"

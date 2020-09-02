@@ -4,6 +4,7 @@
   "description": "ADAL NodeJS authentication library",
   "main": "dist/index.js",
   "repository": "git://github.com/cssuh/ads-adal-library.git",
+  "types": "index.d.ts",
   "scripts": {
     "build": "yarn run build-ts && yarn run lint",
     "build-ts": "tsc",
