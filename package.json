@@ -1,6 +1,6 @@
 {
   "name": "@cssuh/ads-adal-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ADAL NodeJS authentication library",
   "main": "dist/index.js",
   "repository": "git://github.com/cssuh/ads-adal-library.git",
